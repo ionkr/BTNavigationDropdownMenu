@@ -222,6 +222,9 @@ open class BTNavigationDropdownMenu: UIView {
 
     open var didSelectItemAtIndexHandler: ((_ indexPath: Int) -> ())?
     open var isShown: Bool!
+    open var selectedItemIndex: Int? {
+        return tableView.selectedIndexPath
+    }
 
     fileprivate weak var navigationController: UINavigationController?
     fileprivate var configuration = BTConfiguration()
